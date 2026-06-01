@@ -62,5 +62,57 @@ t=90
 r=40
 print(t==r)# gives "FALSE"
 
+#assignment operators
+d=45
+d+=4
+print(d) #add and assign
+
+d=50
+d-=2 #subtract and assign
+print(d)
+
+c=34
+c*=2 #multiply and assign
+print(c)
+
+e=56
+e/=2 #division and assign
+print(e)
+
+u=88
+u%=3 #module and assign
+print(u)
+
+w=89
+w//=2 #floor division and assign 
+print(w)
+
+h=78
+h**=2 #power and assign
+print(h)
+
+k=90
+k&=3 #logical and assign 
+print(k)
+
+y=89
+y|=3 #logical or and assign
+print(y)
+
+r=6
+r^=2 #square root and assign
+print(r)
+
+
+x=5
+x>>=3 #rignt shift and assign
+print(x)
+
+z=34
+z<<=3 #left shift and assign
+print(z)
+
+
+
 
 
