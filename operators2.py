@@ -139,6 +139,38 @@ print(1<x<10)
 print(1<x and x<10 )
 
 
+#logical operators
+#and operator
+a=5
+b=10
+print(a>3 and b>1)
+
+#another example of and operator
+s=5
+print(s>0 and s<10)
+
+#or operator
+x=67
+b=56
+print(x>23 or b>100)
+ 
+#another example of or operator
+f=45
+print(f>100 or f<89)
+
+#not operator
+f=90
+print(not f>200)
+print(not f<100)
+
+#not operator with and operator
+x=6
+print(not(x>3 and x<30))
+
+
+
+
+
 
 
 
