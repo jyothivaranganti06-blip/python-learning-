@@ -113,6 +113,32 @@ z<<=3 #left shift and assign
 print(z)
 
 
+#comparing operators
+e=23
+f=23
+print(e==f)
+
+#not equal to
+p=34
+y=23
+print(p!=y)
+
+#greaterthan or equal to
+d=34
+f=43
+print(f>=d)
+
+#lessthan or equal to 
+f=90
+g=89
+print(g<=f)
+
+# chaining comparision operators 
+x=5
+print(1<x<10)
+print(1<x and x<10 )
+
+
 
 
 
