@@ -168,9 +168,31 @@ x=6
 print(not(x>3 and x<30))
 
 
+#identity operators 
+#is operator
+x=["apple","mango","banana"]
+y=["apple","mango","banana"]
+z=x
+print(x is z) #return true if both variables are the same objects 
+print(y is x)
+print(x==y)
+
+#is not
+x=["apple","mango","banana"]
+y=["apple","mango","banana"]
+print(x is not y) #is not returns true if both variables are not the same
+
+#membership operators
+#in operator
+x=["dream","imagination"]
+print("dream" in x) #return true cause the sequence with the value 'dream' is in the list
+
+#not in operator
+x=["dream","imagination"]
+print("reality" not in x) #returns true if the element is not in the list
 
 
+#bitwise operators
 
-
-
+print(6&3)
 
