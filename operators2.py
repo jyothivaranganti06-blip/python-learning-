@@ -193,6 +193,47 @@ print("reality" not in x) #returns true if the element is not in the list
 
 
 #bitwise operators
+#AND & operator
+print(6&3) #the & operator compares each bit and set it to 1 both are 1 ,otherwise it set to 0
 
-print(6&3)
+#OR | operator
+print(6|3) #the | operator compares each bit and set it to 1 if one of them (or) both ,otherwise it set to 0
+
+# x-or ^ operator compares each bit it set to 1 if one of them is 1,otherwise it set to 0 if both are 1and if both are 0
+
+
+#type conversion or type casting
+#int--->float
+a=5
+print("type of a: ",type(a))
+b=float(a)
+print(b)
+#float--->int
+g=34.5
+h=int(g)
+print(h)
+
+#str--->int
+a="9000"
+c=int(a)
+print(c)
+print(type(c))
+#int-->str
+a=342
+r=str(a)
+print(r)
+print(type(r))
+
+#float-->str
+y=23.344
+z=str(y)
+print(z)
+print(type(z))
+#str-->float
+e="455.888"
+f=float(e)
+print(f)
+print(type(f))
+
+
 
