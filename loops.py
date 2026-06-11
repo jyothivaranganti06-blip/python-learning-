@@ -3,7 +3,7 @@
 #for loop : used when we know how many times to repeat
 
 for i in range(5):
-    print("hello world")
+   print("hello world")
 
 #for loop to print 1 to 10
 for i in range(1,11):
@@ -48,16 +48,16 @@ for i in range(1,21):
     total=total+i
 print(total) 
 #count even and odd numbers
-even_count=0
-odd_count=0
-for i in range(1,11):
- a=int(input("enter a number: "))
- if a%2==0:
-    even_count+=1
- else:
-       odd_count+=1      
-print("even:",even_count)
-print("odd:",odd_count)
+#even_count=0
+#odd_count=0
+#for i in range(1,11):
+ #a=int(input("enter a number: "))
+ #if a%2==0:
+  #  even_count+=1
+ #else:
+ #      odd_count+=1      
+#print("even:",even_count)
+#print("odd:",odd_count)
 
 
 #product of a number
@@ -76,7 +76,7 @@ print(fact)
 #printing a table
 a=int(input("enter a number: "))
 for i in range(1,11):
-    print(a,"*",i,"=",i*a)
+    print(a,"x",i,"=",i*a)
 
 #print all multiple 0f 3 between 1 to 50
 n=3
@@ -99,11 +99,11 @@ print(total)
 #nested for loop
 #prime numbers between 1 to 50
 for num in range(2,51):
-    count=0
-    for i in range(1,num+1):
+   count=0
+   for i in range(1,num+1):
         if num%i==0:
             count+=1
-    if count==2:
+   if count==2:
         print(num)
 
 
@@ -121,13 +121,114 @@ for i in range(1,6):
     print()
 
 #print pattern 
-
-
 for i in range(1,6):
     print("*"*i)
 
 
 
+#while loop
+#while loop is used when we don't know how many times, we repeat until condition becomes false
+#while loop to print 1 to 5
+
+i=1
+while i<=5:
+    print(i)
+    i+=1
+
+#while to check even numbers upto 20
+i=2
+while i<=20:
+    print(i)
+    i+=2
+
+#check odd numbers to upto 20
+i=1
+while i<=20:
+    print(i)
+    i+=2
+
+# printing a table using while loop 
+i=1
+num=int(input("enter a number: "))
+while i<=10:
+    print(num,"x",i,"=",num*i)
+    i=i+1
+
+# sum of a number 
+total=0
+i=1
+while i<=5:
+    
+    total=total+i
+    i=i+1
+print(total)
+
+#sum of even number
+i=2
+total=0
+while i<=20:
+    total+=i
+    i=i+2
+print(total)
 
 
+
+
+#reverse numbers from 10 to 1
+i=10
+while i>=1:
+    print(i)
+    i
+    i-=1
+
+#reversing a number
+n=3456
+rev=0
+while n>0:
+    digit=n%10
+    rev=rev*10+digit
+    n=n//10
+print("reversed num: ",rev)
+
+#palindrome 
+n=12321
+rev=0
+original=n
+while n>0:
+    digit=n%10
+    rev=rev*10+digit
+    n=n//10
+print("reversed",rev)
+if original==rev:
+    print("palindrome")
+else:
+    print("not palindrome ")
+
+#count digits in a number
+n=234545
+cout=0
+while n>0:
+    digit=n%10
+    count+=1
+    n=n//10
+print(count)
+
+#multiple of digits in a number
+n=56
+product=1
+while n>0:
+    digit=n%10
+    n=n//10
+    product*=digit
+print(product)
+
+#largest digit in a number
+n=9675
+largest=0
+while n>0:
+    digit=n%10
+    if digit>largest:
+        largest=digit
+    n=n//10
+print(largest)
 
