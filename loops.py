@@ -48,16 +48,16 @@ for i in range(1,21):
     total=total+i
 print(total) 
 #count even and odd numbers
-#even_count=0
-#odd_count=0
-#for i in range(1,11):
- #a=int(input("enter a number: "))
- #if a%2==0:
-  #  even_count+=1
- #else:
- #      odd_count+=1      
-#print("even:",even_count)
-#print("odd:",odd_count)
+even_count=0
+odd_count=0
+for i in range(1,11):
+ a=int(input("enter a number: "))
+ if a%2==0:
+    even_count+=1
+else:
+       odd_count+=1      
+print("even:",even_count)
+print("odd:",odd_count)
 
 
 #product of a number
@@ -231,4 +231,5 @@ while n>0:
         largest=digit
     n=n//10
 print(largest)
+
 
