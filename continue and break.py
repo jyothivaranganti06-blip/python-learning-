@@ -112,9 +112,3 @@ for i in l:
         continue
     print(i)
 
-s="window"
-vowels="aeiou"
-for i in s:
-    if i==vowels:
-        continue
-    print(i)
