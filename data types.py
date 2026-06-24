@@ -1,5 +1,6 @@
 
-#Python has different data types like text type :'string', Numeric types:'int,float,complex', Sequence types:'list,tuple...
+#Python has different data types like text type :'string', Numeric types:'int,float,complex',
+#  Sequence types:'list,tuple...
 
 
 # the integer value has the 'int' data type

@@ -1,4 +1,5 @@
 
+#variable are used to store values
 a= "python"
 print(a)
 
