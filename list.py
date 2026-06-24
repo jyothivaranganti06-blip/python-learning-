@@ -405,7 +405,7 @@ for i in l:
       o.append(i)
 print("occurence:",o)
 
-# another wayn of removing occurences but it repeatedly shows target value
+# another way of removing occurences but it repeatedly shows target value
 l=[1,2,2,3,2,4]
 target=2
 for i in l:
