@@ -201,4 +201,132 @@ for i in txt:
        vowels[i]=vowels.get(i,0)+1
 print(vowels)
 
- 
+#advanced problems
+#find duplicates in a dictionary
+d={1:"a",2:"a",3:"e",4:"t",5:"t"}
+seen=[]
+dup=[]
+for i in d.values():
+   if i in seen: # it checks if a value is in seen list 
+     if i not  in dup:#again if a value is already in seen list it goes to the dup list
+        dup.append(i) #adds every value at the last
+   else:
+        seen.append(i)    
+print(dup)
+
+#sort a dictionary values
+d={"d":2,"s":1,"a":3}
+srt=[]
+s=(sorted(d.values()))
+srt.append(s)
+print(srt)
+
+#sort dict by keys
+d={"a":1,"c":4,"b":3,"d":2}
+srt=[]
+srt.append(sorted(d.keys()))
+print(srt)
+
+#find the key with the second highest value
+d={"a":34,"b":54,"c":23}
+srt=sorted(d.values())
+large=max(srt)
+r=srt.remove((large))
+print("second maximum value:", max(srt))
+for key in d:
+      if d[key]== (max(srt)):
+         print( "second maximum key:",key)
+
+
+#another method
+d={"a":34,"b":54,"c":23}
+values=list(d.values())
+values.sort()
+second_highest=values[-2]
+for key in d:
+    if d[key]==second_highest:
+       print("second highest key:",key)
+       print("second highest value:",second_highest)
+#remove duplicate values get with key_value pair 
+d={"a":90,"b":30,"c":90}
+seen=[]
+new_dict={}
+for key in d:
+   if d[key]  not in seen:
+      seen.append(d[key])
+      new_dict[key]=d[key]
+print(new_dict)
+#create a nested dictionary of students and marks
+students={"alice":{"maths":90,"science":89},
+          "david":{"maths":87,"science":90}}
+print(students["alice"]["science"])
+print(students["david"]["science"])
+
+#calculate the average marks of all students
+marks={"a":34,"b":56,"c":58,"d":90}
+average=(sum(marks.values()))/len(marks)
+print("average marks of all students:",average)
+
+#find the students who scored greater than the average score
+marks={"a":34,"b":56,"c":58,"d":90}
+average=(sum(marks.values()))/len(marks)
+print("average marks of all students:",average)
+for key in marks:
+   if marks[key] > average:
+      print(key)
+#convert two list into one dictionary
+keys=["a","b","c","d"]
+values=[1,2,3,4,5]
+a=zip(keys,values) #combines elements from multiple iterables (like lists or tuples)element-wise into a single iterator of tuples
+print(dict(a))
+
+#invert a dict while handling duplicates
+d={"a":90,"b":34,"c":90,"d":90,"e":45}
+new={}
+for key in d:
+   value=d[key]
+   if value not in new:
+      new[value]=[]
+   new[value].append(key)
+print(new)
+
+#Bonus challenges
+#count the frequuency of every word in the paragraph
+text="'python is a programming language , the programming language is easy to understand and to write'"
+text=text.split()
+print(text)
+freq={}
+for word in text:
+    if word in freq:
+       freq[word]=freq[word]+1
+    else:
+       freq[word]=1
+print(freq)
+
+#group names by their first letter
+d=["alice","paro","ayush","aditya","kaira","krishna"]
+g_name={}
+for name in d:
+   first=name[0]
+   if first  not in g_name:
+      g_name[first]=[]
+   g_name[first].append(name)   
+print(g_name)
+#first non-repeating character
+s="programming"
+count={}
+#count frequency
+for i in s:
+   if i not  in count:
+      count[i]=1
+   else:
+      count[i]+=1
+#find first non-repeating character
+for i in s:
+   if count[i] == 1:
+       print("non-repeating characters",i)
+       break
+  
+
+    
+   
