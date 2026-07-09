@@ -1,0 +1,120 @@
+# A set is a collection of unordered elements and stores unique elements,is mutable .
+fruits={"apple","orange","grapes"}
+print(fruits)
+
+students={"rahul","rohith","rahul","raghav"}#set can't contain duplicate values
+print(students)#duplicates disappear automatically
+#subjects passed
+passed={"python","java","SQL"}
+print("python"in passed)  #true
+#creating a set
+a={1,2,3,4}
+b=set()
+c=set([1,2,3,4])
+print(c)
+print(a)
+
+#important functions
+#add()
+s={1,2}
+s.add(3)
+print(s)
+#update()
+s={1,2}
+s.update([3,4])
+print(s)
+#remove()
+s={1,2,3}
+s.remove(2)
+print(s)
+#discard
+s={2,3,4}
+s.discard(3)
+print(s)
+#pop()
+s={2,3,4,5}
+print(s.pop())
+print(s)
+#clear()
+s={2,3,4}
+print(s.clear())
+#copy()
+s={2,3,4}
+print(s.copy())
+print(s)
+
+#set operations
+#UNION combines two sets and ignore duplicates
+a={1,2,3,4}
+b={2,3,4,5}
+print(a|b)
+
+#INTERSECTION only gives the same in both sets
+a={1,2,3,4}
+b={2,3,4,5}
+print(a&b)
+
+#DIFFERENCE 
+a={1,2,3,4}
+b={2,3,4,5}
+print(a-b)
+
+#SYMMETRIC DIFFERENCE
+a={1,2,3,4}
+b={4,5,6,7}
+print(a^b)
+
+# FROZEN SET  connat be modified
+#a=frozenset([1,2,3])
+#a.add(4)
+#print(a)
+
+# practice questions
+# BASIC
+# create a set of five colors
+colors={"red","green","yellow","orange"}
+print(colors) #printing all elements
+
+#add one color to colors
+colors.add("purple")
+print(colors)
+#remove one color
+colors.remove("orange")
+print(colors)
+#length of set
+print(len(colors))
+#check if number exist
+print(2 in colors)
+#clear the set
+print(colors.clear())
+#copy a set
+colors={"red","green","yellow","orange"}
+print(colors.copy())
+print(colors)
+#convert a list to set
+a=[1,2,4]
+c=set([1,2,4])
+print(c)
+#convert set to list 
+a={1,2,5}
+c=list({1,2,5})
+print(c)
+
+#INTERMEDIATE PROBLEMS
+#find union
+a={1,4,3}
+d={3,2,6}
+print(a|d)
+#find intersection
+a={2,3,4}
+d={2,4,5}
+print(a&d)
+#find difference
+a={3,9,0}
+b={3,4,5,6}
+print(a-b)
+print(b-a)
+#find symmetric difference
+a={2,3,4,5}
+b={2,4,5,7}
+print(a^b)
