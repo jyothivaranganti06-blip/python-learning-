@@ -118,3 +118,43 @@ print(b-a)
 a={2,3,4,5}
 b={2,4,5,7}
 print(a^b)
+#remove duplicates from list
+l=[2,3,2,4,5,3]
+s=set(l) #coverting list to set
+a=list(s)#converting the set to list without deplicates
+print(s)
+print(a)
+
+#count unique numbers
+l=[4,5,6,4,5,6]
+s=set(l)
+print(s) #set only contain unique values
+print(len(s)) #count the elements
+
+#find common elements in two lists
+l1=[2,3,4,5,1]
+l2=[3,4,7,8,2]
+s1=set(l1)
+s2=set(l2)
+print(s1&s2) #intersection combines the common elements
+
+#check whether two sets are equal
+s1={2,3,4,9}
+s2={8,5,6,1}
+s3={8,5,1,6}
+print(s2==s3) #true
+print(s1==s2) #false
+
+#find the elements only in the first set
+s1={3,4,5}
+s2={4,3,6}
+print(s1-s2) #using the symbol
+print(s1.difference(s2)) #using the method
+
+#merge the sets
+s1={4,3,2}
+s2={6,7,8}
+s3={9,8,0}
+print(s1|s2)#using the symbol
+print(s1.union(s2))#using the method
+print(s1.union(s2,s3))
