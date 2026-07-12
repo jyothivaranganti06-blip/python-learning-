@@ -157,4 +157,26 @@ s2={6,7,8}
 s3={9,8,0}
 print(s1|s2)#using the symbol
 print(s1.union(s2))#using the method
-print(s1.union(s2,s3))
+print(s1.union(s2,s3)) #merging the three sets
+
+#advanced problems
+#finding missing numbers using sets
+expected=set(range(1,11))
+s={3,4,6,9}
+print(expected.difference(s))
+#check if the one set is a subset of another
+s1={2,3,4,5}
+s2={2,4,5,3}
+print(s1.issubset(s2)) # .issubset checks if the set contain all elements of another set
+print(s1<=s2)
+#check if one set is superset of another
+s={2,3,4,6}
+s1={2,3,4,6}
+print(s.issuperset(s1)) #superset is check if a set contains all elements of another set
+print(s>=s1)
+#check if two sets are disjoint 
+s={3,2,4,5}
+s1={8,9,7,6}
+print(s.isdisjoint(s1)) #return true if two sets has no common elements
+
+#remove the duplicates while preserving the order
