@@ -213,7 +213,7 @@ while n>0:
     n=n//10
 print(count)
 
-#multiple of digits in a number
+#multiply of digits in a number
 n=56
 product=1
 while n>0:
