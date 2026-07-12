@@ -323,10 +323,30 @@ for i in s:
       count[i]+=1
 #find first non-repeating character
 for i in s:
-   if count[i] == 1:
+   if s.count(i) == 1:
        print("non-repeating characters",i)
        break
-  
-
-    
    
+#dictionary comprehension
+#squaring
+square={i : i*i for i in range(1,6)}
+print(square)
+
+num=[2,3,1,4]
+a={ i for i in num if i%2==0 }
+print(a)
+
+a={i for i in range(1,6) if i%2==0 }
+print("even:",a)   
+
+d={i for i in range(1,21) if i>5 and i%4==0}
+print(d)
+
+#popitem()
+d={1:"rahul",2:"raghu",3:"david"}
+print(d.popitem())
+print(d)
+#sorting  
+print(sorted(d.keys()))
+print(sorted(d.values()))
+print(sorted(d.items()))
