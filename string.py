@@ -27,7 +27,7 @@ print(str1 + str2)
 print("sun"+"moon")
 
 
-#length odf string
+#length of string
 length=len("surprise")
 print(length)
 
@@ -138,7 +138,7 @@ str2=str.join(list)
 print(str2)
 
 ex:2
-str=" "
+str="  "
 list=['p','y','t','h','o','n']
 str2=str.join(list)
 print(str2)
@@ -220,9 +220,9 @@ else:
     print("not palindrome")
 #count vowels
 var="programming"
-vowels="aeiou"
+#vowels="aeiou"
 count=0
-for i in vowels:
+for i in 'aeiou':
     if i in var:
         count+=1
 print(count)
@@ -233,6 +233,7 @@ cons=[]
 count=0
 for i in var:
     if i not in vowels:
+        
         cons.append(i)
         count+=1
 print(cons)      
@@ -248,9 +249,10 @@ var="hello world"
 print(var.replace(" ",""))
 
 #intermediate level
- #find duplicate charactersx
+ #find duplicate characters
 v="programming"
 dup=[]
+
 for i in v:
      if  v.count(i)>1 and i not in dup:
           dup.append(i)
@@ -266,7 +268,7 @@ print(count)
 v="aabbcdde"
 for i in v:
     if v.count(i)==1:
-        print(i)
+        print(i )
 #removes duplicates characters
 v="programming"
 dup=[]
@@ -275,7 +277,8 @@ for i in v:
     if  i not in dup: #preserves order
     
        dup.append(i)
-print("".join(dup))
+print("".join(dup)) #convert list into string
+
 #another example
 c="banana"
 d=[]
