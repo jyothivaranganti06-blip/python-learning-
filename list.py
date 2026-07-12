@@ -144,8 +144,7 @@ print("grapes" not in fruit)
 m_li=[2,3,4]
 s=0
 for i in m_li:
-
-  s=s+i
+   s=s+i
 print(s)
 
 l=[8,9,6,1]
@@ -256,7 +255,8 @@ for i in range(len(nums)):
  for j in range(i+1,len(nums)):
        
   if nums[i]+nums[j]==target:
-      print(i,j)
+   print(nums[i],nums[j])
+
      
 
 #move zeros to end of the list
@@ -282,7 +282,7 @@ for i in range(1,6):
 for j in l:
  actual=actual+j
 missing=total-actual
-print(j)
+
 print("actual:" ,actual)
 print("sum:",total)
 print("missing: ",missing)
@@ -413,7 +413,6 @@ for i in l:
      l.remove(target)
 print("occurence:",l)
 
-
 # checking palindrome
 p=[1,2,3,2,1]
 l2=p[::-1]
@@ -421,7 +420,6 @@ if p==l2:
     print("palindrome: ")
 else:
    print("no")
-
 
 #checkinng the unique elements
 q=[1,2,2,3,4,4,5]
@@ -531,7 +529,7 @@ print("matrix of the list:",b)
 squares=[i**2 for i in range(1,6)]
 print(squares) 
 
-#converinng string to the uppercase
+#converting string to the uppercase
 words=["apple","papaya","mango"]
 result=[word.upper() for word in words]
 print(result)   
