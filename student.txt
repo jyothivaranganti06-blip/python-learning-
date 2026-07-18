@@ -1,0 +1,8 @@
+hello there i'm a computer science student
+pursuing graduation
+subjects
+python
+c
+database
+java
+machine learning
