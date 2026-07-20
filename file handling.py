@@ -179,6 +179,8 @@ with open("students.csv","r")as file:
      #     "course":"computer science"
     # })
 
+#problems on csv
+#create a csv file 
 import csv
 with open("employees.csv","w",newline="")as file:
      writer= csv.writer(file)
@@ -186,4 +188,83 @@ with open("employees.csv","w",newline="")as file:
      ["jennie",30,"IT"],
      ["mina",26,"HR"],
       ["jihyo",25,"IT"]])
-     
+#read and print all records
+with open("employees.csv","r")as file:
+     reader=csv.reader(file)
+     for row in reader:
+      print(row)
+#append one new student 
+with open("employees.csv","a")as file:
+     writer=csv.writer(file)
+     writer.writerow(["kazhua",25,"HR"])
+#count the number of rows
+#including header
+import csv
+count=0
+with open("employees.csv","r")as file:
+     reader=csv.reader(file)
+     for row in reader:
+      count+=1
+print(count)
+#excluding header
+count=0
+with open("employees.csv","r")as file:
+    reader=csv.reader(file)
+    next(reader)
+    for row in reader:
+        count+=1
+print(count)
+
+#intermediate
+#search for a student by name
+with open("employees.csv","r")as file:
+    reader=csv.DictReader(file)
+    name=input("enter name: ")
+    for row in reader:
+        if row["name"]==name:
+            print(row)
+#print only students older than 25:
+with open("employees.csv","r")as file:
+    reader=csv.DictReader(file)
+    for row in reader:
+        if int(row["age"])>25:
+         print(row)
+#find the average age
+total_age=0
+count=0
+with open("employees.csv","r")as file:
+    reader=csv.DictReader(file)
+    for row in reader:
+     age=int(row["age"])
+     total_age+=age
+     count+=1
+     avg=total_age/count
+print(avg) 
+#update  employee's department 
+rows=[]
+with open("employees.csv","r")as file:
+    reader=csv.DictReader(file)
+    name=input("enter your name: ")
+    new_department=input("enter your new department: ")
+    for row in reader:
+        if row["name"]==name:
+          row["department"]=new_department
+        rows.append(row)
+with open("employees.csv","w",newline="")as file:
+    writer=csv.DictWriter(file,fieldnames=["name","age","department"])
+    writer.writeheader()
+    writer.writerows(rows)
+#delete a employees record
+rows=[]
+name="jihyo"
+with open("employees.csv","r")as file:
+    reader=csv.DictReader(file)
+    for row in reader:
+        if row["name"]!=name:
+            rows.append(row)
+with open("employees.csv","w",newline="")as file:
+    writer=csv.DictWriter(file,fieldnames=["name","age","department"])
+    writer.writeheader()
+    writer.writerows(rows)
+
+
