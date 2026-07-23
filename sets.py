@@ -180,3 +180,111 @@ s1={8,9,7,6}
 print(s.isdisjoint(s1)) #return true if two sets has no common elements
 
 #remove the duplicates while preserving the order
+s=[5,6,4,3,4,5,7,9]
+seen=set()
+result=[]
+for i in s:
+    if i not in seen:
+        seen.add(i)
+        result.append(i)
+print(result)
+
+#find unique words in a sentencce while preserving the order
+text="set is  unordered set don't allow duplicates  "
+l=text.split()
+s=set()
+res=[]
+for i in l:
+    if i not in s:
+        s.add(i)
+        res.append(i)
+print(res)
+
+#find repeated  characters
+word="blender bottle"
+seen=set()
+dup=set()
+for i in word:
+    if i not in seen:
+        seen.add(i)
+    else:
+        dup.add(i)
+print(dup)
+
+#find the first non-repeating charater
+word="punch"
+res={}
+for i in word:
+    if i not in res:
+        res[i]=1
+    else:
+        res[i]+=1
+for i in word:
+    word.count(i)==1
+    break
+print(" first non-repeating character",i)
+
+#find the common friends between two users
+user1={"priya","preethi","rohan","rocky"}
+user2={"hemanth","neha","preethi","rocky","riya"}
+print(user1.intersection(user2))
+
+#recommanded friends
+user1={"priya","james","pinky"}
+user2={"james","preethi","juhoon"}
+combine=user1.union(user2)
+common=user1.intersection(user2)
+recommand=combine-common
+print( "recommanded friends: ",recommand)
+
+#compare two files for common words
+file1="python has set data structure"
+file2="set is a python data structure"
+f1=file1.split()
+f2=file2.split()
+s1=set(f1)
+s2=set(f2)
+inter=s1.intersection(s2)
+print(inter)
+
+#group students by selected subjects
+subjects={
+    "python":set(),
+    "science":set(),
+    "english":set()
+}
+subjects["python"].add("james")
+subjects["python"].add("pinky")
+subjects["python"].add("jay")
+subjects["python"].add("martin")
+
+subjects["science"].add("james")
+subjects["science"].add("pinky")
+subjects["science"].add("niki")
+subjects["science"].add("jay")
+
+subjects["english"].add("james")
+subjects["english"].add("pinky")
+subjects["english"].add("niki")
+subjects["english"].add("juhoon")
+print(subjects["python"])
+print(subjects["english"])
+print(subjects)
+
+#sudoku row uniqueness check
+row=[2,3,4,5,2,6,4,5,6]
+if len(row)==len(set(row)):
+    print("valid sudoku row")
+else:
+    print("invalid sudoku row")
+
+#find unique email domains
+emails=["james@gmail.com","pinky@yahoo.com","martin@outlook.com","niki@yahoo.com"]
+domain=set()
+for email in emails:
+    parts=email.split("@")
+    domain.add(parts[1])
+print(domain)
+
+
+

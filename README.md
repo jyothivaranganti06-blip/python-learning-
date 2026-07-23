@@ -27,4 +27,3 @@ This repository contains my Python learning journey.
 
 ## Notes
 I will regularly update this repository with my notes, exercises, and projects.
->>>>>>> 6df433e (Create README.md)
