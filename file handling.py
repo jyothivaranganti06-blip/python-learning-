@@ -421,9 +421,97 @@ with open("employees payroll.csv","r")as file:
     print("total salary: ",total_salary)
 
 #library management system
+import csv
+with open("library management system.csv","w",newline="")as file:
+    writer=csv.writer(file)
+    writer.writerows([["ID","Bookname","Author","Status"],
+                     [111,"Python","Guido","Available"],
+                     [112,"Data Structures","Narasimha","Issued"],
+                     [113,"Machine Learning","Andrew NG","Available"],
+                     [114,"Database system","Ramakrishna","Issued"],
+                     [115,"Operating systems","Silberschatz","Available"]]
+                      )
+#display all books
+with open("library management system.csv","r")as file:
+    reader=csv.DictReader(file)
+    for row in reader:
+        print(row)
+#search by book ID
+with open("library management system.csv","r")as file:
+    id=int(input("enter the ID: "))
+    reader=csv.DictReader(file)
+    for row in reader:
+        if int(row["ID"])==id:
+            print(row)
+#search by book name
+with open("library management system.csv","r")as file:
+    name=input("enter book name: ").lower()
+    reader=csv.DictReader(file)
+    for row in reader:
+        if row["Bookname"].lower()==name:
+            print(row)
 
+#count status 
+available=0
+issued=0
+with open("library management system.csv","r")as file:
+    reader=csv.DictReader(file)
+    for row in reader:
+        if row["Status"]=="Available":
+            available+=1
+        elif row["Status"]=="Issued":
+            issued+=1
+print("available: ",available)
+print("issued: ",issued)
 
+#add a new book
+import csv
+new=[]
+bookid=int(input("enter book id: "))
+bookname=input("enter book name: ")
+author=input("enter author name: ")
+status=input("enter status: ")
+with open("library management system.csv","r")as file:
+    reader=csv.DictReader(file)
+    for row in reader:
+        new.append(row)
+new.append({"ID":bookid,
+                "Bookname":bookname,
+                "Author":author,
+                "Status":status})
+with open("library management system.csv","w",newline="")as file:
+    writer=csv.DictWriter(file,fieldnames=["ID","Bookname","Author","Status"])
+    writer.writeheader()
+    writer.writerows(new)
+print("books sucessfully added")
 
+#delete the book by bookid 
+rows=[]
+bookid=int(input("enter the bookid: "))
+with open("library management system.csv","r")as file:
+    reader=csv.DictReader(file)
+    for row in reader:
+        if row["ID"]!=bookid:
+            rows.append(row)
+with open("library management system.csv","w",newline="")as file:
+    writer=csv.DictWriter(file,fieldnames=["ID","Bookname","Author","Status"])
+    writer.writeheader()
+    writer.writerows(new)
+print("deleted the book sucessfully!....")
 
+#count books
+books=0
+with open("library management system.csv","r")as file:
+    reader=csv.DictReader(file)
+    for row in reader:
+            books+=1
+print("books count:",books)
 
+available=[]
+with open("library management system.csv","r")as file:
+    reader=csv.DictReader(file)
+    for row in reader:
+        if row["Status"]=="Available":
+            available.append(row)
+print("available books are: ",available)
 
