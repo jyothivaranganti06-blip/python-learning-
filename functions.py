@@ -564,16 +564,594 @@
 # res=count_word(txt)
 # print(res)
 
-#character frequency
-def char_freq(word):
-     freq={}
-     for i in word:
-          if i in freq:
-               freq[i]+=1
-          else:
-               freq[i]=1
-     return freq
-txt=input("enter the word: ")
-res=char_freq(txt)
-print(res)
+# #character frequency
+# def char_freq(word):
+#      freq={}
+#      for i in word:
+#           if i in freq:
+#                freq[i]+=1
+#           else:
+#                freq[i]=1
+#      return freq
+# txt=input("enter the word: ")
+# res=char_freq(txt)
+# print(res)
+
+# #*args
+# #add all number of numbers
+# def add_all(*numbers):
+#     return sum(numbers)
+# res=add_all(1,2,3,4)
+# es=add_all(10,20,30)
+# print(add_all(2,4,6,8,10))
+# print(res)
+# print(es)
+
+# #average of numbers
+# def avg(*args):
+#     average=sum(args)/len(args)
+#     return average
+# res=avg(10,20,30)
+# print(res)
+
+# #find largest number using *args
+# def largest(*num):
+#     if not num:
+#         return None
+#     largest=num[0]
+#     for i in num:
+#      if i >largest:
+#         largest=i
+#     return largest
+# res=largest(5,4,7,9,50)
+# print(res)
+
+# #**kwargs
+# def student_details(**details):
+#    return details
+# print(student_details(name="jyothi",age=20,course="bsc(honours)"))
+
+# #employee details
+# def employee_details(**details):
+#    return details
+# print(employee_details(name="james",salary=30000,department="IT"))
+
+# #functions calling functions
+# def calculate_total(prices):
+#    return sum(prices)
+# #count=int(input("enter the no.of counts: "))
+# #amount=[]
+# #for  i in range(count):
+#   # num=int(input("enter the prices: "))
+#  #  amount.append(num)
+# #res=calculate_total(amount)
+# #print(res)
+
+# def calculate_discount(prices,discount_percentage):
+#    discount_amount=prices*discount_percentage/100
+#    return discount_amount
+# #res=calculate_discount(3500,10)
+# #print(res)
+
+# def calculate_tax(amount,tax):
+#    total=amount*tax/100
+#    return total
+# #res=calculate_tax(3150,10)
+# #print(res)
+# def final_bill(prices,discount_percentage,tax_percentage):
+#    total=calculate_total(prices)
+#    discount=calculate_discount(total,discount_percentage)
+#    amount=total-discount
+#    tax=calculate_tax(amount,tax_percentage)
+#    final_amount=amount+tax
+#    return final_amount
+# prices=[1000,2000,500]
+# res=final_bill(prices,10,10)
+# print("final bill: ",res)
+
+# #student result system 
+# def calculate_total_marks(marks):
+#    return sum(marks)
+
+# def calclulate_avg(marks):
+#    return sum(marks)/len(marks)
+
+# def calculate_grade(grade):
+#    if grade>90:
+#       return "A"
+#    elif grade>80:
+#       return "B"
+#    elif grade>70:
+#       return "C"
+#    elif grade>50:
+#       return "D"
+#    else:
+#       return "Fail"
+# def display_result(marks):
+
+#    total=calculate_total_marks(marks)
+#    avg=calclulate_avg(marks)
+#    g=calculate_grade(avg)
+
+#    print("total",total)
+#    print("average",avg)
+#    print("grade",g)
+# s_marks=[40,50,34,56,89]
+# res=display_result(s_marks)
+# print(res)
+
+# #ATM system
+# def check_pin():
+#    origin_pin=input("enter the pin: ")
+#    confirm_pin=input("enter the confirm pin: ")
+#    if origin_pin==confirm_pin:
+#       return "correct pin"
+#    else:
+#       return "incorrect pin"
+
+# def withdraw(balance):
+#    amount=int(input("enter the amount"))
+#    if amount>balance:
+#       print("insuffient balance")
+#    else:
+#        new_balance=balance-amount
+#        print("withdrawal successful remaining balance:",new_balance)
+       
+
+# def deposit(balance):
+#    amount=int(input("enter the deposit amount: "))
+#    new_amount=balance+amount
+#    print("amount after deposit: ",new_amount)
+
+# def atm():
+#     current_balance=5000
+#     status=check_pin()
+#     print(status)
+
+#     if status=="correct pin":
+#        current_balance=withdraw(current_balance)
+#        depo=deposit(current_balance)
+# atm()
+
+
+# #recursion
+# #count down
+# def countdown(n):
+#      if n==0:
+#         return 
+#      print(n)
+#      countdown(n-1)
+# countdown(5)
+
+# #factorial 
+# def factorial(n):
+#    if n==1:
+#       return 1
+#    return n*factorial(n-1)
+# print("factorial:",factorial(5))
+# print("problem solved")
+
+# #sum of numbers
+# def add_numbers(n):
+#     if n==1:
+#      return 1
+#     return n+add_numbers(n-1)
+# print(add_numbers(5))
+
+# def fibbinacci(n):
+#    if n==0:
+#     return 0
+#    if n==1:
+#      return 1
+#    return fibbinacci(n-1)+fibbinacci(n-2)
+# print(fibbinacci(7))
+
+# #lambda function
+# #square
+# square= lambda n: n*n
+# result=square(5)
+# print(result)
+
+# #even
+# even=lambda n:n%2==0
+# print(even(6))
+
+# #odd
+# odd=lambda n:n%2!=0
+# print(odd(7))
+
+# #even/odd
+# even_odd=lambda n:"even" if n%2==0 else "odd"
+# print(even_odd(8))
+
+# #add two numbers
+# add= lambda a,b:a+b
+# print(add(6,7))
+
+# #sort using lambda
+# students=[("Adithya",50),("Banu",80),("Chinnu",70)]
+# students.sort(key=lambda student:student[1])
+# print("students sorted by marks:")
+# print(students)
+
+
+# #higher order apply operation
+# def add(a,b):
+#     return a+b
+# def multiply(a,b):
+#     return a*b
+# def apply_operation(a,b,operation):
+#     return operation(a,b)
+# print(apply_operation(5,10,add))
+# print(apply_operation(4,5,multiply))
+
+# #custom filter
+# def is_even(n):
+#     return n%2==0
+# def filter_numbers(numbers,condition):
+#     result=[]
+#     for number in numbers:
+#         if condition(number):
+#             result.append(number)
+#     return result
+# numbers=[1,2,3,4,5,6,7,8,9,10]
+# print(filter_numbers(numbers,is_even))
+
+# #calculator
+# def add(a,b):
+#     return a+b
+# def substract(a,b):
+#     return a-b
+# def multiply(a,b):
+#     return a*b
+# def apply_calculation(a,b,operation):
+#     return operation(a,b)
+# print(apply_calculation(5,2,add))
+# print(apply_calculation(9,2,substract))
+# print(apply_calculation(6,7,multiply))
+
+# #final function projects
+# #complete ATM 
+# def check_pin(pin):
+#     c_pin= int(input("enter the pin: "))
+#     if pin==c_pin:
+#         print(" login sucessfull")
+#         return True
+#     else:
+#         print("invalid pin")
+#         return False
+
     
+# def check_balance(balance):
+#         return balance
+
+# def withdraw(amount,balance):
+#     if amount<balance:
+#         new_balance=balance-amount
+#         print(new_balance)
+#     else:
+#         print("insuffiecient balance")
+
+# def deposit(amount,balance):
+#     new_balance=amount+balance
+#     return new_balance
+
+# def change_pin():
+#     new_password=int(input("enter the new password: "))
+#     confirm_pass=int(input("enter the confirm password: "))
+#     if confirm_pass==new_password:
+#         print("password changed sucessfully")
+#         return new_password
+#     else:
+#         print("incorrect password")
+#         return None
+# pin=1234
+# balance=5000
+# login=check_pin(pin)
+# if login:
+#     print("1.check Balance\n""2.withdraw\n""3.deposit\n""4.change pin\n""Exist\n")
+#     choice=int(input("enter the choice:"))
+#     if choice==1:
+#         result=check_balance(balance)
+#         print("Balance",result)
+#     elif choice==2:
+#         amount=int(input("ente the amount:"))
+#         balance=withdraw(amount,balance)
+#         print("new balance after withdraw:",balance)
+#     elif choice==3:
+#         amount=int(input("enter the deposit amount:"))
+#         balace=deposit(amount,balance)
+#         print("amount after deposit",balance)
+#     elif choice==4:
+#         new_pin=change_pin()
+#         if new_pin is not None:
+#             pin=new_pin
+#         elif choice==5:
+#             print("Thank you")
+#         else:
+#             print("invalid choice")
+
+# #shopping cart
+# def add_items(products):
+#     item=input("enter the item: ")
+#     price=float(input("enter the price: "))
+#     products.append([item,price])
+#     return products
+
+# def remove_items(products):
+#     item=input("enter the item to remove: ")
+
+#     for product in products:
+#         if product[0]==item:
+#             products.remove(product)
+#             print("item removed")
+#             return products
+#         else:
+#             print("item not found")
+#             return products
+
+# def calculate_total(products):
+#     total=0
+#     for product in products:
+#         total=total+product[1]
+#     return total
+
+# def apply_discount(total):
+#     discount=total*0.10
+#     final_amount=total-discount
+#     return final_amount
+
+# def calculate_tax(amount):
+#     tax=amount*0.05
+#     final_amount=amount+tax
+#     return final_amount
+
+# def generate_bill(products,total,discount_amount,tax_amount,final_amount):
+#     print("\n--------BILL----------")
+#     for product in products:
+#         print(product[0],"RS",product[1])
+
+#     print("------------------")
+#     print("Total",total)
+#     print("Discount",discount_amount)
+#     print("Tax",tax_amount)
+#     print("Final amount",final_amount)
+
+# products=[]
+# products=add_items(products)
+# products=add_items(products)
+# products=add_items(products)
+
+# print("\n your cart")
+# print(products)
+
+# remove=input("\n do you want to remove an item yes/no: ")
+# if remove=="yes":
+#     products=remove_items(products)
+# total=calculate_total(products)
+# discounted_amount=apply_discount(total)
+# discount_amount=total-discounted_amount
+# final_amount=calculate_tax(discounted_amount)
+# tax_amount=final_amount-discounted_amount
+
+# generate_bill(products,total,discount_amount,tax_amount,final_amount)
+
+# #student management
+# def add_student(students):
+#     person=input("enter your name: ")
+#     mark1=int(input("enter the subject 1 marks: "))
+#     mark2=int(input("enter the subject 2 marks: "))
+#     mark3=int(input("enter the subject 3 marks: "))
+#     students.append([person,mark1,mark2,mark3])
+#     return students
+
+# def total_marks(students):
+#     total=0
+#     for student in students:
+#         total=total + student[1]+student[2]+student[3]
+#     return total
+
+# def total_avg(total,students):
+#     average=total/3
+#     return average
+
+# def grade(marks):
+#     if marks>=90:
+#         return "grade A"
+#     elif marks>=70:
+#         return "grade B "
+#     elif marks>=50:
+#         return "grade C"
+#     else:
+#         return "fail"
+    
+# def display_student(students,total_marks,average,grade):
+#     for student in students:
+#         print("\n--------student report-------")
+#         print("name: ",student[0])
+#         print("subject1: ",student[1])
+#         print("subject2: ",student[2])
+#         print("subject3: ",student[3])
+
+#     print("Total marks: ",total_marks)
+#     print("Average: ",average)
+#     print("Grade: ",grade)
+
+# students=[]
+
+# students=add_student(students)
+# student=students[0]
+
+
+# print("\n your details")
+# print(students)
+# total=total_marks(students)
+# average=total_avg(total,students)
+# g=grade(average)
+# display_student(students,total,average,g)
+
+# #hospital billing
+# def patient_details():
+#     name=input("enter the patient name: ")
+#     return name
+
+# def consultation_fee():
+#     amount=int(input("enter the consultation fee: "))
+#     return amount
+
+# def medicine_bill():
+#     price=int(input("enter the medicine bill: "))
+#     return price
+
+# def room_price():
+#     day=500
+#     days=int(input("how many days ; per day RS 500: "))
+#     room_charge=day*days
+#     return room_charge
+
+# def total_bill(patient,consultation,medicine,room):
+    
+#     print("\n------patient Report---------")
+#     print("patien Name: ",patient)
+#     print("consultation fee: ",consultation)
+#     print("medicine bill: ",medicine)
+#     print("room charge: ",room)
+#     total=consultation+medicine+room
+#     print("total bill: ",total)
+
+# patient=patient_details()
+# consultation=consultation_fee()
+# medicine=medicine_bill()
+# room=room_price()
+# total_bill(patient,consultation,medicine,room)
+
+
+# #restaurant management
+# def show_menu():
+#     print("\n--------MENU------ ")
+#     print("1.BURGER 100 RS")
+#     print("2.PIZZA 180 RS")
+#     print("3.MATCHA 100 RS")
+# def take_order():
+#     orders=[]
+#     while True:
+#         choice=int(input("\n choose item (0 to finish): "))
+#         if choice==0:
+#             break
+#         quantity=int(input("enter quantity: "))
+#         if choice==1:
+#             orders.append([100,quantity])
+#         elif choice==2:
+#             orders.append([180,quantity])
+#         elif choice==3:
+#             orders.append([100,quantity])
+#         else:
+#             print("invalid choice")
+
+#     return orders
+
+# def calculate_bill(orders):
+#     subtotal=0
+#     for order in orders:
+#         price=order[0]
+#         quantity=order[1]
+#         subtotal=subtotal+(price*quantity)
+#     return subtotal
+
+# def apply_discount(subtotal):
+#     discount=subtotal*10/100
+#     return discount
+
+# def generate_bill(subtotal,discount):
+#     final_bill=subtotal-discount
+
+#     print("\n----bill-------")
+#     print("subtotal RS:",subtotal)
+#     print("discount RS:",discount)
+#     print("final bill RS:",final_bill)
+
+# def main():
+#     show_menu()
+#     orders=take_order()
+#     subtotal=calculate_bill(orders)
+#     discount=apply_discount(subtotal)
+#     generate_bill(subtotal,discount)
+    
+# main()
+
+#personal expense tracker
+
+expenses=[]
+def add_expense():
+    category=input("enter the category: ")
+    amount=int(input("enter the expense amount: "))
+
+    expense={"category": category,"amount": amount}
+    expenses.append(expense)
+    print("expenses added sucessfully")
+
+def remove_expense():
+    if len(expenses)==0:
+        print("no expenses to remove")
+        return 
+    for i in range(len(expenses)):
+        print(i+1, expenses[i] ["category"],"RS",expenses[i] ["amount"])
+        choice=int(input("enter the expense number to remove:"))
+        if choice>=1 and choice<=len(expenses):
+            removed=expenses.pop(choice-1)
+            print(removed["category"],"expense removed")
+        else:
+            print("invalid choice")
+
+def total_expenses():
+    total=0
+    for expense in expenses:
+        total=total+expense["amount"]
+    print("total expense: RS",total)
+
+def highest_expense():
+    if len(expenses)==0:
+        print("No expense available")
+        return 
+    highest=expenses[0]
+    for expense in expenses:
+        if expense["amount"]>highest["amount"]:
+            highest=expense
+    print("highest expense:",highest["category"],"RS",highest["amount"])
+
+def average_expense():
+    if len(expenses)==0:
+        print("no expense available")
+        return
+    total=0
+    for expense in expenses:
+        total=total+expense["amount"]
+    average=total/len(expenses)
+    print("average expense : RS",format(average,".2f"))
+
+
+while True :
+    print("\n ----personal expenses tracker------")
+    print("1. Add expenses")
+    print("2. Remove expenses")
+    print("3.show Total")
+    print("4. show highest")
+    print("5. show average")
+    print("6.exist")
+
+    choice=int(input("enter your choice: "))
+    if choice==1:
+        add_expense()
+    elif choice==2:
+        remove_expense()
+    elif choice==3:
+        total_expenses()
+    elif choice==4:
+        highest_expense()
+    elif choice==5:
+        average_expense()
+    elif choice==6:
+        print("thankyou")
+        break
+    else:
+        print("invalid choice")
