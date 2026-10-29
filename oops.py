@@ -1,4 +1,4 @@
-# class: a class is a blueprint for creating objects 
+# #class: a class is a blueprint for creating objects 
 # class student:
 #     pass
 # s1=student()
@@ -88,3 +88,41 @@
 # print(r1.calculate_area())
 # print(r2.calculate_area())
 
+#class variables vs instance variables
+#instance variables: belong to individual objects. Each object can have different values
+class Employees :
+    company="Google"
+    def __init__(self,name,salary):
+        self.name=name
+        self.salary=salary
+e1=Employees("jyothi",75000)
+e2=Employees("Adithya",65000)
+print(e1.name)
+print(e1.salary)
+print(e1.company)
+
+print(e2.name)
+print(e2.salary)
+print(e2.company)
+
+#inheritance:means one class can reuse the properties and methods of another class
+
+class Animal:
+    def eat(self):
+        print("this animal is eating")
+class Dog (Animal):
+    def bark (self):
+        print("dog is barking")
+d1=Dog()
+d1.eat()
+d1.bark()
+
+#inheritance with __init__() :a child class can also inherit attributes from its parent
+class Animal:
+    def __init__(self,name):
+        self.name=name
+class Dog (Animal):
+    def bark (self):
+        print(self.name, "is barking")
+d1=Dog("YEONTAN")
+d1.bark()
